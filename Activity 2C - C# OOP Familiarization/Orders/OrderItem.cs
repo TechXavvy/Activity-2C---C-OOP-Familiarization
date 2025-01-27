@@ -14,6 +14,12 @@ namespace Activity_2C___C__OOP_Familiarization.Orders
 
         public OrderItem(Product prod, int quan)
         {
+            if (quan < 0)
+            {
+                Console.WriteLine($"An item's quantity cannot be negative. System will set it to 0.");
+                quan = 0;
+            }
+            
             Product = prod;
             Quantity = quan;
         }
